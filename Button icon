@@ -1,0 +1,43 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  // ignore: library_private_types_in_public_api
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("FAB Button Example"),
+          backgroundColor: Colors.blue,
+          actions: <Widget>[
+            IconButton(icon: const Icon(Icons.camera_alt), onPressed: () => {}),
+            IconButton(
+                icon: const Icon(Icons.account_circle), onPressed: () => {})
+          ],
+        ),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.green,
+          foregroundColor: Colors.white,
+          onPressed: () => {},
+          child: const Icon(Icons.navigation),
+        ),
+        /*floatingActionButton:FloatingActionButton.extended(  
+        onPressed: () {},  
+        icon: Icon(Icons.save),  
+        label: Text("Save"),  
+      ), */
+      ),
+    );
+  }
+}
