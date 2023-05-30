@@ -1,0 +1,59 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  // ignore: library_private_types_in_public_api
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+          appBar: AppBar(
+            title: const Text('Flutter FlatButton Example'),
+          ),
+          body: Center(
+              child: Column(children: <Widget>[
+            Container(
+              margin: const EdgeInsets.all(25),
+              child: FlatButton(
+                child: const Text(
+                  'SignUp',
+                  style: TextStyle(fontSize: 20.0),
+                ),
+                onPressed: () {},
+                color: Colors.pinkAccent,
+                textColor: Colors.pinkAccent,
+              ),a
+            ),
+            Container(
+              margin: const EdgeInsets.all(25),
+              child: FlatButton(
+                child: const Text(
+                  'LogIn',
+                  style: TextStyle(fontSize: 20.0),
+                ),
+                color: Colors.blueAccent,
+                textColor: Colors.white,
+                onPressed: () {},
+              ),
+            ),
+          ]))),
+    );
+  }
+
+  // ignore: non_constant_identifier_names
+  FlatButton(
+      {required Text child,
+      required Null Function() onPressed,
+      required Color textColor,
+      required MaterialAccentColor color}) {}
+}
